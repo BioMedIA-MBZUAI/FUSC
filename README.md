@@ -2,7 +2,7 @@
 
 
 This repo contains the Pytorch implementation of our paper:
-> [**FUSC: Fetal Ultrasound Semantic Clustering of Second Trimester Scans Using Deep Self-supervised Learning**]([https://arxiv.org/pdf/2005.12320.pdf](https://arxiv.org/abs/2310.12600))
+> [**FUSC: Fetal Ultrasound Semantic Clustering of Second Trimester Scans Using Deep Self-supervised Learning**](https://arxiv.org/abs/2310.12600)
 >
 > Hussain Alasmawi, Leanne Bricker, and Mohammad Yaqub.
 
@@ -50,19 +50,21 @@ python selflabel.py --config_env configs/your_env.yml --config_exp configs/selfl
 If you find this repo useful for your research, please consider citing our paper:
 
 ```bibtex
-@inproceedings{vangansbeke2020scan,
-  title={Scan: Learning to classify images without labels},
-  author={Van Gansbeke, Wouter and Vandenhende, Simon and Georgoulis, Stamatios and Proesmans, Marc and Van Gool, Luc},
-  booktitle={Proceedings of the European Conference on Computer Vision},
-  year={2020}
+@misc{alasmawi2023fusc,
+      title={FUSC: Fetal Ultrasound Semantic Clustering of Second Trimester Scans Using Deep Self-supervised Learning}, 
+      author={Hussain Alasmawi and Leanne Bricker and Mohammad Yaqub},
+      year={2023},
+      eprint={2310.12600},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
-
 ```
 For any enquiries, please contact the main authors.
 
 ## License
 
+
 This software is released under a creative commons license which allows for personal and research use only. For a commercial license please contact the authors. You can view a license summary [here](http://creativecommons.org/licenses/by-nc/4.0/).
 
-## Acknoledgements
-This work was supported by Toyota, and was carried out at the TRACE Lab at KU Leuven (Toyota Research on Automated Cars in Europe - Leuven).
+## Acknowledgements
+This code based on [SCAN](https://github.com/wvangansbeke/Unsupervised-Classification/tree/master)
