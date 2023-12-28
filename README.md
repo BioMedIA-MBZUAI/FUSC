@@ -1,4 +1,4 @@
-# Learning to Classify Images without Labels
+# FUSC: Fetal Ultrasound Semantic Clustering of Second Trimester Scans Using Deep Self-supervised Learning
 
 
 This repo contains the Pytorch implementation of our paper:
@@ -18,13 +18,14 @@ conda install termcolor                       # For colored print statements
 ```
 We refer to the `requirements.txt` file for an overview of the packages in the environment we used to produce our results.
 
-## Training
+## Dataset
+We provide the code for clustering public fetal ultrasound plane found [here](https://zenodo.org/records/3904280) 
 
+Use the `images_resized.ipynb` to preprocess the dataset.
 ### Setup
 The following files need to be adapted in order to run the code on your own machine:
-- Change the file paths to the datasets in `utils/mypath.py`, e.g. `/path/to/cifar10`.
 - Specify the output directory in `configs/env.yml`. All results will be stored under this directory. 
-
+- Specify the csv_path and img_folder_path in 'configs/*/*_US.yml'
 
 ### Train model
 The configuration files can be found in the `configs/` directory. The training procedure consists of the following steps:
@@ -32,7 +33,7 @@ The configuration files can be found in the `configs/` directory. The training p
 - __STEP 2__: Perform the clustering step i.e. `fusc.py`
 - __STEP 3__: Perform the self-labeling step i.e. `selflabel.py`
 
-For example, run the following commands sequentially to perform our method on US:
+For example, run the following commands sequentially to perform our method on fetal ultrasound dataset:
 ```shell
 python simclr.py --config_env configs/your_env.yml --config_exp configs/pretext/simclr_USyml
 python scan.py --config_env configs/your_env.yml --config_exp configs/fusc/fusc_US.yml
